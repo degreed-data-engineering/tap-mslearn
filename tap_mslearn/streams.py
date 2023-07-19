@@ -24,4 +24,13 @@ class LearnCatalogs(TapMSLearnStream):
     records_jsonpath = "$.modules[0:]"
     schema = th.PropertiesList(
         th.Property("uid", th.StringType),
+        th.Property("duration_in_minutes", th.IntegerType),
+        th.Property("locale", th.StringType),
+        th.Property("url", th.StringType),
+        th.Property("title", th.StringType),
+        th.Property("summary", th.StringType),
+        th.Property("icon_url", th.StringType),
+        th.Property("levels", th.ArrayType(th.StringType)),
+        th.Property("type", th.StringType),
+        th.Property("products", th.ArrayType(th.StringType)),
     ).to_dict()
